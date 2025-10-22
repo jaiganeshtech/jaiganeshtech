@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cyber Portfolio — Red & Black</title>
+  <meta name="description" content="Premium cyber-security portfolio — red & black theme, animated, responsive." />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a2d9b1f6d6.js" crossorigin="anonymous"></script>
+  <style>
+    :root{
+      --bg:#050406; --card:#0b0b0c; --accent:#ff1f1f; --muted:#9aa0a6; --glass: rgba(255,255,255,0.03);
+      --blur: 12px; --radius:14px; --gap:1.25rem;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family: 'Poppins', sans-serif; background: radial-gradient(1200px 600px at 10% 10%, rgba(255,0,0,0.03), transparent),
+        linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(3,3,3,1) 100%); color:#eaeaea; -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+
+    /* Page container */
+    .wrap{max-width:1200px;margin:0 auto;padding:1.5rem}
+
+    /* Top nav */
+    header{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;position:sticky;top:0;z-index:30;background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));backdrop-filter: blur(6px);}
+    .logo{display:flex;align-items:center;gap:.6rem}
+    .logo .mark{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#820000);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(255,0,0,0.08) inset}
+    .logo .mark i{transform:rotate(-12deg)}
+    nav ul{display:flex;gap:1.1rem;align-items:center;list-style:none;margin:0;padding:0}
+    nav a{color:#fff;text-decoration:none;padding:.45rem .7rem;border-radius:8px;font-weight:600;opacity:.9}
+    nav a:hover{background:rgba(255,0,0,0.06); box-shadow: 0 6px 18px rgba(255,0,0,0.06);}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:3rem 0}
+    .hero .intro{max-width:760px}
+    .eyebrow{display:inline-flex;align-items:center;gap:.6rem;color:var(--muted);font-weight:600;font-size:.85rem}
+    .eyebrow .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px rgba(255,31,31,0.6)}
+
+    h1{font-family:'Orbitron',sans-serif;font-weight:700;font-size:3.1rem;line-height:1.03;margin:.6rem 0}
+    .typewriter{color:var(--accent);font-weight:700}
+    p.lead{color:var(--muted);font-size:1.05rem;margin-top:.5rem}
+    .cta{display:inline-flex;align-items:center;gap:.8rem;padding:.9rem 1.2rem;border-radius:12px;background:linear-gradient(90deg,var(--accent),#ff5454);color:#0b0b0c;font-weight:700;text-decoration:none;box-shadow:0 20px 40px rgba(255,0,0,0.12);transform:translateZ(0)}
+    .cta i{font-size:1.05rem}
+
+    /* Card on right */
+    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1.6rem;border-radius:16px;border:1px solid rgba(255,255,255,0.03);box-shadow: 0 8px 40px rgba(0,0,0,0.6);backdrop-filter: blur(var(--blur));}
+    .avatar{width:80px;height:80px;border-radius:12px;overflow:hidden;display:inline-block}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .meta{display:flex;align-items:center;gap:1rem}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:1rem}
+    .stat{padding:.6rem;border-radius:10px;background:rgba(255,255,255,0.02);text-align:center}
+    .stat strong{display:block;font-size:1.05rem}
+    .stat small{color:var(--muted)}
+
+    /* Sections */
+    section{padding:3rem 0;border-top:1px solid rgba(255,255,255,0.02)}
+    .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+
+    /* Service cards */
+    .service{padding:1.2rem;border-radius:12px;background:linear-gradient(180deg, rgba(255,0,0,0.02), rgba(255,0,0,0.01));border:1px solid rgba(255,31,31,0.04);box-shadow:0 8px 28px rgba(0,0,0,0.6)}
+    .service h4{margin:.4rem 0}
+    .service p{color:var(--muted);font-size:.95rem}
+
+    /* Projects */
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .proj{position:relative;border-radius:12px;overflow:hidden;min-height:180px;background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.5));border:1px solid rgba(255,255,255,0.03)}
+    .proj .overlay{position:absolute;inset:0;padding:1rem;display:flex;flex-direction:column;justify-content:flex-end;gap:.6rem}
+    .proj h3{margin:0}
+
+    /* Contact */
+    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .input, textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:.9rem;border-radius:10px;color:#fff}
+    textarea{min-height:140px;resize:vertical}
+    .btn-primary{padding:.85rem 1rem;border-radius:10px;background:linear-gradient(90deg,var(--accent),#ff7b7b);font-weight:700;border:none;cursor:pointer}
+
+    footer{padding:2rem 0;text-align:center;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .projects,.grid-3{grid-template-columns:repeat(2,1fr)}
+      nav ul{display:none}
+      .mobile-menu{display:block}
+    }
+    @media (max-width:560px){
+      .projects,.grid-3{grid-template-columns:1fr}
+      .contact-form{grid-template-columns:1fr}
+      h1{font-size:2.2rem}
+    }
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .glass{background:var(--glass);border-radius:12px;padding:1rem}
+
+    /* subtle animations */
+    [data-animate]{opacity:0;transform:translateY(20px);transition:all .75s cubic-bezier(.2,.9,.3,1)}
+    [data-animate].in{opacity:1;transform:none}
+
+    /* floating neon */
+    .neon-line{height:2px;background:linear-gradient(90deg,transparent,var(--accent));filter:blur(6px);}
+
+    /* particle canvas sits behind content */
+    #particles{position:fixed;inset:0;z-index:0;pointer-events:none}
+    .content-layer{position:relative;z-index:10}
+
+  </style>
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="content-layer">
+    <div class="wrap">
+      <header>
+        <div class="logo">
+          <div class="mark"><i class="fas fa-shield-alt"></i></div>
+          <div>
+            <div style="font-weight:700">JAIGANESH L</div>
+            <div style="font-size:.75rem;color:var(--muted)">Cybersecurity • Workshops • Dev</div>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu" style="display:none">
+          <button id="menubtn" class="glass"><i class="fas fa-bars"></i></button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="intro">
+            <div class="eyebrow"><span class="dot"></span> Cybersecurity Specialist</div>
+            <h1>We secure systems — <span class="typewriter" id="type"></span></h1>
+            <p class="lead">High-impact security audits, penetration testing, training workshops and modern web development. I design resilient systems with an offensive mindset and defensive rigor.</p>
+            <div style="margin-top:1.25rem">
+              <a class="cta" href="#contact"><i class="fas fa-rocket"></i> Get a Free Consultation</a>
+            </div>
+          </div>
+
+          <aside class="profile-card">
+            <div class="meta">
+              <div class="avatar"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="avatar"></div>
+              <div>
+                <div style="font-weight:700">Jaiganesh L</div>
+                <div class="muted" style="font-size:.9rem">Lead Security Researcher</div>
+              </div>
+            </div>
+            <div class="stat-grid" style="margin-top:1rem">
+              <div class="stat"><strong>120+</strong><small>Audits</small></div>
+              <div class="stat"><strong>30</strong><small>Workshops</small></div>
+              <div class="stat"><strong>15</strong><small>Tools</small></div>
+            </div>
+            <div style="margin-top:1rem;display:flex;gap:.6rem;align-items:center">
+              <a class="glass" href="#projects" style="text-decoration:none;color:#fff"><i class="fas fa-briefcase"></i> Portfolio</a>
+              <a class="glass" href="#contact" style="text-decoration:none;color:#fff"><i class="fas fa-envelope"></i> Hire</a>
+            </div>
+          </aside>
+        </section>
+
+        <section id="about" data-animate>
+          <div class="section-head">
+            <h2 style="font-family: 'Orbitron',sans-serif">About Me</h2>
+            <div class="muted">Ethical hacker • Trainer • Developer</div>
+          </div>
+          <div class="glass">
+            <p class="muted" style="margin:0">I run hands-on penetration tests, secure architecture reviews and training programs for colleges and organisations. My methodology combines modern red-team tooling with reproducible remediation guides and developer-friendly reports.</p>
+          </div>
+        </section>
+
+        <section id="services" data-animate>
+          <div class="section-head"><h2>Services</h2><div class="muted">What I deliver</div></div>
+          <div class="grid-3">
+            <div class="service">
+              <h4><i class="fas fa-user-secret"></i> Penetration Testing</h4>
+              <p>Full-scope pentests (web, infra, cloud) with actionable reports, PoCs, and remediation walkthroughs.</p>
+            </div>
+            <div class="service">
+              <h4><i class="fas fa-chalkboard-teacher"></i> Workshops & Training</h4>
+              <p>Custom workshops for students and professionals: secure coding, CTFs, and hands-on labs.</p>
+            </div>
+            <div class="service">
+              <h4><i class="fas fa-code"></i> Web & Tooling</h4>
+              <p>Secure web development, automation scripts, and security tooling tailored to your stack.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" data-animate>
+          <div class="section-head"><h2>Projects</h2><div class="muted">Selected work</div></div>
+          <div class="projects">
+            <div class="proj" style="background-image:url('https://images.unsplash.com/photo-1526378722168-1a7f9f5b1bda?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder');background-size:cover;background-position:center">
+              <div class="overlay">
+                <h3>Red Team Engagement</h3>
+                <p class="muted">External red-team against microservices. Full exploitation chain and remediation playbook.</p>
+              </div>
+            </div>
+            <div class="proj" style="background-image:url('https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder');background-size:cover;background-position:center">
+              <div class="overlay">
+                <h3>Secure CI/CD</h3>
+                <p class="muted">Automated scans, policy as code and pipeline hardening for faster secure releases.</p>
+              </div>
+            </div>
+            <div class="proj" style="background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder');background-size:cover;background-position:center">
+              <div class="overlay">
+                <h3>Training Portal</h3>
+                <p class="muted">Interactive CTF-style training platform for student workshops.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" data-animate>
+          <div class="section-head"><h2>Contact</h2><div class="muted">Let's collaborate</div></div>
+          <form class="glass" onsubmit="handleContact(event)">
+            <div class="contact-form">
+              <input class="input" name="name" placeholder="Your name" required>
+              <input class="input" name="email" type="email" placeholder="Email" required>
+              <input class="input" name="subject" placeholder="Subject">
+              <input class="input" name="company" placeholder="Company / College">
+              <textarea name="message" placeholder="How can I help?" required></textarea>
+              <div style="display:flex;align-items:center;gap:.6rem">
+                <button class="btn-primary" type="submit">Send Message</button>
+                <button type="button" class="glass" onclick="downloadVCard()"><i class="fas fa-download"></i> vCard</button>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <footer>
+          <div class="neon-line" style="width:160px;margin:0 auto 1rem auto"></div>
+          <div class="muted">© <span id="year"></span> Jaiganesh L — Built with ❤️ & code</div>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    // small utilities
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple typewriter loop
+    const words = ['pentests.', 'secure code.', 'resilient infra.', 'hands-on training.'];
+    let i = 0, j = 0, current = '', isDeleting = false; const typeEl = document.getElementById('type');
+    function tick(){
+      const full = words[i];
+      if(isDeleting){ current = full.substring(0, --j); }
+      else { current = full.substring(0, ++j); }
+      typeEl.textContent = current;
+      if(!isDeleting && current === full){ isDeleting = true; setTimeout(tick, 900); }
+      else if(isDeleting && current === ''){ isDeleting = false; i = (i+1)%words.length; j=0; setTimeout(tick, 250); }
+      else { setTimeout(tick, isDeleting?40:80); }
+    }
+    tick();
+
+    // Animate on scroll (IntersectionObserver)
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('in');
+      });
+    },{threshold:.12});
+    document.querySelectorAll('[data-animate]').forEach(el=>io.observe(el));
+
+    // contact handler (local demo) - will show a toast
+    function handleContact(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const name = fd.get('name');
+      openToast('Thanks, '+name+' — message captured (demo).');
+      e.target.reset();
+    }
+
+    // small toast
+    function openToast(msg){
+      const t = document.createElement('div');
+      t.textContent = msg; t.style.position='fixed';t.style.right='20px';t.style.bottom='20px';t.style.padding='12px 16px';t.style.background='#111';t.style.border='1px solid rgba(255,0,0,0.12)';t.style.borderRadius='10px';t.style.boxShadow='0 10px 30px rgba(0,0,0,0.6)';t.style.zIndex=9999;document.body.appendChild(t);
+      setTimeout(()=>t.style.opacity=0,2500); setTimeout(()=>t.remove(),3200);
+    }
+
+    // vCard download helper
+    function downloadVCard(){
+      const vcard = `BEGIN:VCARD\nVERSION:3.0\nFN:Jaiganesh L\nORG:Security Research\nTITLE:Lead Security Researcher\nEMAIL;TYPE=INTERNET:you@example.com\nTEL:+0000000000\nEND:VCARD`;
+      const blob = new Blob([vcard],{type:'text/vcard'});
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download='jaiganesh.vcf'; a.click();
+    }
+
+    // particles (lightweight)
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d'); let w=canvas.width=innerWidth, h=canvas.height=innerHeight; const particles=[];
+    function rand(min,max){return Math.random()*(max-min)+min}
+    function Particle(){this.x=rand(0,w);this.y=rand(0,h);this.r=rand(0.4,2.2);this.vx=rand(-0.1,0.1);this.vy=rand(-0.15,0.15);this.alpha=rand(0.06,0.18)}
+    for(let k=0;k<90;k++)particles.push(new Particle());
+    function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight}
+    addEventListener('resize',resize);
+    function draw(){ctx.clearRect(0,0,w,h);
+      // lines
+      for(let p of particles){
+        p.x += p.vx; p.y += p.vy; if(p.x>w) p.x=0; if(p.x<0) p.x=w; if(p.y>h) p.y=0; if(p.y<0) p.y=h;
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fillStyle = `rgba(255,31,31,${p.alpha})`; ctx.fill();
+      }
+      // connect
+      for(let i=0;i<particles.length;i++) for(let j=i+1;j<particles.length;j++){
+        const a=particles[i], b=particles[j]; const dx=a.x-b.x, dy=a.y-b.y; const d = Math.sqrt(dx*dx+dy*dy);
+        if(d<120){ ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.strokeStyle = `rgba(255,31,31,${0.02*(120-d)})`; ctx.lineWidth=0.6; ctx.stroke(); }
+      }
+      requestAnimationFrame(draw);
+    }
+    draw();
+
+    // small click ripple on CTA
+    document.querySelectorAll('.cta').forEach(btn=>btn.addEventListener('click', (e)=>{
+      btn.animate([{transform:'translateY(0)'},{transform:'translateY(-6px)'}],{duration:260,fill:'forwards'});
+    }));
+
+  </script>
+</body>
+</html>
