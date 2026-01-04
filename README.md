@@ -62,7 +62,7 @@ I believe security is not an afterthought — it is a **core engineering respons
 ## 🌐 Connect
 <p align="center">
   <a href="https://www.linkedin.com/in/jaiganeshlakshmanan/">
-    <img src="https://img.shields.io/badge/LinkedIn-Professional-blue?style=for-the-badge&logo=linkedin" />
+    <img src="https://jaiganesh-portfolio.vercel.app/" />
   </a>
   <a href="https://x.com/Cyberjaitech">
     <img src="https://img.shields.io/badge/Twitter-Insights-1DA1F2?style=for-the-badge&logo=twitter" />
