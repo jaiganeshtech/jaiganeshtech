@@ -16,19 +16,17 @@ Engineering secure systems, security tooling, and resilient digital infrastructu
 
 ## Professional Summary
 
-I am a **Cybersecurity Developer** with a strong focus on **security-first engineering**.  
-I design and build **secure systems, defensive security tools, and automation** that address real-world threats and operational security challenges.
+I am a **Cybersecurity Developer** focused on building **security-first, production-ready systems and tools**.  
+My work emphasizes **defensive security, system hardening, authentication design, and security automation**, grounded in real-world threat models.
 
-My approach combines **engineering discipline, threat modeling, and practical security controls** to deliver solutions that are reliable, maintainable, and production-ready.
-
-Security is not an add-on — it is a **design principle**.
+I approach security as an **engineering discipline**, not a checklist.
 
 ---
 
-## Security Domains & Expertise
+## Areas of Expertise
 
 - Application & API Security  
-- Secure Authentication and Authorization  
+- Secure Authentication & Authorization  
 - Vulnerability Assessment & Security Tooling  
 - Security Automation & Monitoring  
 - Linux, Networking & Cloud Security Fundamentals  
@@ -42,22 +40,22 @@ Security is not an add-on — it is a **design principle**.
   <img src="https://skillicons.dev/icons?i=python,js,nodejs,linux,docker,git,github,aws,bash,mysql,mongodb&theme=dark" />
 </p>
 
-> Tooling is selected based on **security impact and reliability**, not trends.
+> Tooling is chosen based on **security impact, reliability, and maintainability**.
 
 ---
 
-## Selected Security Projects
+## Selected Work
 
 - **AuthShield**  
   Secure authentication and access-control system focused on session security and role isolation.
 
 - **SentinelScan**  
-  Vulnerability assessment tool designed for identifying common application and configuration risks.
+  Vulnerability assessment tool designed to identify common application and configuration risks.
 
 - **LogHawk**  
-  Security log monitoring and alerting framework for detecting suspicious activity.
+  Log monitoring and security alerting framework for detecting suspicious behavior.
 
-*(Additional tools and research repositories are actively developed.)*
+*(Additional tools and security research repositories are actively maintained.)*
 
 ---
 
@@ -69,33 +67,17 @@ Security is not an add-on — it is a **design principle**.
 
 ---
 
-## Professional Presence
-
-<p align="center">
-  <a href="https://github.com/jaiganeshtech">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="36" />
-  </a>
-  <a href="https://www.linkedin.com/in/jai-ganesh-389505285">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="36" />
-  </a>
-  <a href="https://x.com/Cyberjaitech">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" width="36" />
-  </a>
-</p>
-
----
-
-## Collaboration & Work
+## Collaboration
 
 Open to:
 - Security engineering and tooling projects  
-- Defensive security & automation initiatives  
-- Research-driven cybersecurity collaborations  
+- Defensive security and automation initiatives  
+- Research-driven cybersecurity work  
 
 📫 **Contact:** jaiganesh.l@gmail.com
 
 ---
 
 <p align="center">
-  <i>“Strong security is built deliberately — never assumed.”</i>
+  <i>“Security is engineered deliberately — never assumed.”</i>
 </p>
