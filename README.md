@@ -90,30 +90,6 @@ const jaiganesh = {
 
 ---
 
-## 🚀 Featured Projects
-
-<div align="center">
-
-<a href="https://github.com/jaiganeshtech/authshield">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=jaiganeshtech&repo=authshield&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</a>
-<a href="https://github.com/jaiganeshtech/sentinelscan">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=jaiganeshtech&repo=sentinelscan&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</a>
-
-<a href="https://github.com/jaiganeshtech/loghawk">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=jaiganeshtech&repo=loghawk&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</a>
-<a href="https://github.com/jaiganeshtech/cryptovault">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=jaiganeshtech&repo=cryptovault&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-</a>
-
-</div>
-
----
-
-<div align="center">
-
 ## 📊 GitHub Stats
 
 <img src="https://user-images.githubusercontent.com/74038190/212284158-e840e285-664b-44d7-b79b-e264b5e54825.gif" width="400">
